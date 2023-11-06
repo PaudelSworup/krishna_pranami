@@ -5,7 +5,7 @@ import { items } from "@/objects/items";
 import React, { useContext } from "react";
 import Layout from "../Layout";
 
-const index = () => {
+const Index = () => {
   const { darkmode } = useContext(ThemeContext);
   return (
     <Layout title="videos">
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -5,7 +5,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import React, { useContext } from "react";
 import Layout from "../Layout";
 
-const articleDescription = ({
+const ArticleDescription = ({
   articleData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { darkmode } = useContext(ThemeContext);
@@ -36,7 +36,7 @@ const articleDescription = ({
   );
 };
 
-export default articleDescription;
+export default ArticleDescription;
 
 export async function getStaticPaths() {
   const paths = article.map((article) => {

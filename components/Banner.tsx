@@ -1,17 +1,18 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const Banner = () => {
   const [index, setIndex] = useState<number>(0);
 
   let img_container = [
-    "https://mahamati.info/resources/Raj%20Shyama%20ji%20(1).jpg",
     "https://4.bp.blogspot.com/-3zv5x7Kqr1Q/VlFt6abpAUI/AAAAAAAABZI/DYZ5-xB61RU/s1600/DSC04666.JPG",
+    "https://mahamati.info/resources/Raj%20Shyama%20ji%20(1).jpg",
   ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex(() => Math.floor(Math.random() * img_container.length));
-    }, 5000);
+    }, 3000);
     return () => clearInterval(intervalId);
   }, [img_container.length]);
 
@@ -24,10 +25,12 @@ const Banner = () => {
             "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))",
         }}
       ></div>
-      <img
+      <Image
         src={img_container[index]}
         alt="Library"
-        className="w-full h-[750px]"
+        width={900}
+        height={900}
+        style={{ width: "100%", height: "800px" }}
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl text-center tracking-widest font-bold text-white mb-6">

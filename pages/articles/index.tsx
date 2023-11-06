@@ -5,7 +5,7 @@ import { article } from "@/objects/articleItems";
 import Layout from "../Layout";
 import React, { useContext } from "react";
 
-const index = () => {
+const Index = () => {
   const { darkmode } = useContext(ThemeContext);
   return (
     <>
@@ -21,4 +21,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
