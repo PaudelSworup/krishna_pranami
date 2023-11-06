@@ -16,12 +16,31 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav_menu {
+  position: relative;
+  /* background-color: red; */
+}
+
+.nav_menu::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 2px;
+  opacity: 0;
+  display: flex;
+  right: 0;
+  background-color: #fff;
+  transform-origin: center;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transform: scaleX(0);
+}
+
+.nav_menu:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.scrollbar_hide::-webkit-scrollbar {
+  display: none;
 }
