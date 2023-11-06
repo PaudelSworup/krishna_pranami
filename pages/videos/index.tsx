@@ -13,6 +13,7 @@ const Index = () => {
       <div className="p-4  flex flex-wrap gap-4">
         {items.map((data) => (
           <Card
+            key={data?.id}
             id={data?.id}
             source={data?.media}
             imgSrc={data?.src}
