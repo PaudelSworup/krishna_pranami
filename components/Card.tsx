@@ -65,7 +65,7 @@ const Card: React.FC<card_interface> = ({ id, source, imgSrc, videoTitle }) => {
           </div>
         </div>
       </div>
-      <div style={{ width: "200px", height: "200px" }}>
+      <div style={{ width: "200px", height: "200px", marginTop: "5px" }}>
         <Image
           onClick={playVideo}
           onMouseEnter={handleMouseEnter}

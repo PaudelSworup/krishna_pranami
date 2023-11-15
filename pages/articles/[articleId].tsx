@@ -39,7 +39,7 @@ const ArticleDescription = ({
 export default ArticleDescription;
 
 export async function getStaticPaths() {
-  const paths = article.map((article) => {
+  const paths = article?.map((article) => {
     return {
       params: {
         articleId: `${article?.id}`,
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   console.log("id", id);
 
-  const articleData = article.find((data) => data?.id === id);
+  const articleData = article?.find((data) => data?.id === id);
 
   return {
     props: {

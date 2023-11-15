@@ -25,22 +25,24 @@ const Nav: React.FC<light_dark> = (props) => {
       >
         <>
           <div className="flex p-4 justify-between items-center">
-            <div className="flex gap-2  cursor-pointer justify-center items-center">
-              <Image
-                src="https://mahamati.info/resources/Raj%20Shyama%20ji%20(1).jpg"
-                alt=""
-                width={40}
-                height={40} // Set the desired height
-                style={{ width: "auto", height: "auto", borderRadius: "50%" }} // Maintain aspect ratio and apply styling
-              />
-              <Image
-                src="https://pranami.org/images/logo_pranami.svg"
-                alt=""
-                width={200}
-                height={200} // Set the desired height
-                // style={{ width: "auto", height: "auto", borderRadius: "50%" }} // Maintain aspect ratio and apply styling
-              />
-            </div>
+            <Link href="/">
+              <div className="flex gap-2  cursor-pointer justify-center items-center">
+                <Image
+                  src="https://mahamati.info/resources/Raj%20Shyama%20ji%20(1).jpg"
+                  alt=""
+                  width={40}
+                  height={40} // Set the desired height
+                  style={{ width: "auto", height: "auto", borderRadius: "50%" }} // Maintain aspect ratio and apply styling
+                />
+                <Image
+                  src="https://pranami.org/images/logo_pranami.svg"
+                  alt=""
+                  width={200}
+                  height={200} // Set the desired height
+                  // style={{ width: "auto", height: "auto", borderRadius: "50%" }} // Maintain aspect ratio and apply styling
+                />
+              </div>
+            </Link>
 
             <div className="sm:hidden absolute right-6 top-6 flex items-center pr-2">
               <button
