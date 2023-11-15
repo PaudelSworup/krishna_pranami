@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <Layout title="videos">
       <Nav darkmode={darkmode} />
-      <div className="p-4  flex flex-wrap gap-4">
+      <div className="p-4 mx-8 flex flex-wrap justify-center gap-4">
         {items.map((data) => (
           <Card
             key={data?.id}

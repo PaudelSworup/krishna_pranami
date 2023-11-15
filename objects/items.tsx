@@ -7,19 +7,19 @@ export const items: {
   {
     id: 1,
     src: "/images/shreeraji.png",
-    media: "./media/pranami1.mp4",
+    media: "/media/pranami1.mp4",
     videoTitle: "Tartam Sagar",
   },
   {
     id: 2,
     src: "/images/krishna.png",
-    media: "./media/pranami2.mp4",
+    media: "/media/pranami2.mp4",
     videoTitle: "About Krishna Pranamai Dharma",
   },
   {
     id: 3,
     src: "/images/meher.png",
-    media: "./media/meher.mp4",
+    media: "/media/meher.mp4",
     videoTitle: "Shree Raji ko Meher",
   },
 ];
