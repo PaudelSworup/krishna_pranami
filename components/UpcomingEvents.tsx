@@ -1,9 +1,15 @@
-import React from "react";
+import ThemeContext from "@/ApplicationWrapper/ThemeContext";
+import React, { useContext } from "react";
 
 const UpcomingEvents = () => {
+  const { darkmode } = useContext(ThemeContext);
   return (
     <div className="h-80 sm:mx-20 m-2 mx-2">
-      <h2 className="underline text-xl text-center tracking-wider font-serif font-bold">
+      <h2
+        className={`underline text-xl ${
+          darkmode ? "text-white" : "text-black"
+        } text-center tracking-wider font-serif font-bold`}
+      >
         Upcoming events
       </h2>
       <div className="flex justify-center items-center mt-10">

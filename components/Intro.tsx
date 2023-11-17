@@ -18,7 +18,7 @@ const Intro: React.FC<light_dark> = (props) => {
       <h2
         className={`${
           props?.darkmode ? "text-white" : "text-black"
-        } text-center text-2xl p-2 tracking-widest`}
+        } text-center underline font-serif font-bold text-2xl p-2 tracking-widest`}
       >
         Introduction
       </h2>
@@ -31,7 +31,7 @@ const Intro: React.FC<light_dark> = (props) => {
       <h2
         className={`${
           props?.darkmode ? "text-white" : "text-black"
-        } text-center text-2xl p-2 tracking-widest`}
+        } text-center underline font-serif font-bold text-2xl p-2 tracking-widest`}
       >
         History
       </h2>
