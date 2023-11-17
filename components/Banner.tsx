@@ -33,10 +33,10 @@ const Banner = () => {
         style={{ width: "100%", height: "800px" }}
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl text-center tracking-widest font-bold text-white mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl text-center tracking-wide font-bold text-white mb-6">
           श्री राजी श्यामाजी प्रणाम
         </h1>
-        <div className="text-xl md:text-2xl lg:text-3xl font-medium text-white tracking-widest">
+        <div className="text-xl md:text-2xl lg:text-3xl font-medium text-white tracking-wide ">
           <p> तारतम्येन जानति सच्चिदानन्द लक्षणम्</p>
           <p> श्री राजी श्यामाजी प्रणाम</p>
           <p> श्री राजी श्यामाजी प्रणाम</p>

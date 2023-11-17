@@ -4,11 +4,7 @@ export const items: { id: Number; menu: string; to: string }[] = [
     menu: "Home",
     to: "/",
   },
-  {
-    id: 2,
-    menu: "About Us",
-    to: "/about",
-  },
+
   {
     id: 3,
     menu: "Articles",
