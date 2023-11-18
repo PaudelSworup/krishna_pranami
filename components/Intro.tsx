@@ -23,7 +23,7 @@ const Intro: React.FC<light_dark> = (props) => {
         Introduction
       </h2>
       <IntroComponents
-        darkmode={props.darkmode}
+        darkmode={props?.darkmode}
         details={introduction}
         image={img1}
       />
@@ -36,19 +36,19 @@ const Intro: React.FC<light_dark> = (props) => {
         History
       </h2>
       <IntroComponents
-        darkmode={props.darkmode}
+        darkmode={props?.darkmode}
         details={devchandraji}
         image={img2}
       />
 
       <IntroComponents
-        darkmode={props.darkmode}
+        darkmode={props?.darkmode}
         details={prananathji}
         image={img3}
       />
 
       <IntroComponents
-        darkmode={props.darkmode}
+        darkmode={props?.darkmode}
         details={chatrasalji}
         image={img4}
       />

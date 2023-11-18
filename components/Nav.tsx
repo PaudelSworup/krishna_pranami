@@ -67,7 +67,7 @@ const Nav: React.FC<light_dark> = (props) => {
                   <Link href={to}>
                     <div
                       className={`${
-                        props.darkmode ? "text-white " : "text-black"
+                        props?.darkmode ? "text-white " : "text-black"
                       }cursor-pointer relative p-1 tracking-widest`}
                     >
                       <span className="nav_menu">{menu}</span>
