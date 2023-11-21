@@ -9,7 +9,7 @@ const Footer = () => {
         backgroundSize: "cover",
         filter: "grayscale(100%)",
       }}
-      className="bg-white rounded-lg shadow h-28 mt-6 dark:bg-gray-800"
+      className="bg-white rounded-lg shadow h-36 mt-6 dark:bg-gray-800"
     >
       <div className="w-full mx-auto  p-4 md:flex md:items-center md:justify-between">
         <span className="text-lg text-white sm:text-center dark:text-gray-400">
