@@ -5,7 +5,6 @@ import { useContext } from "react";
 import ThemeContext from "@/ApplicationWrapper/ThemeContext";
 import Banner from "@/components/Banner";
 import Intro from "@/components/Intro";
-import UpcomingEvents from "@/components/UpcomingEvents";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +16,6 @@ export default function Home() {
       <Nav darkmode={darkmode} />
       <Banner />
       <Intro darkmode={darkmode} />
-      <UpcomingEvents />
       <Footer />
     </Layout>
   );
