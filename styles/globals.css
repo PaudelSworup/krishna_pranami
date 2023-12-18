@@ -49,10 +49,6 @@ body {
   display: none;
 }
 
-body {
-  background-color: #f1f5f9;
-}
-
 @media (max-width: 600px) {
   .videos-section {
     display: flex;
