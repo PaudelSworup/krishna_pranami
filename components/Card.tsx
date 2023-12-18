@@ -42,21 +42,22 @@ const Card: React.FC<card_interface> = ({ id, source, imgSrc, videoTitle }) => {
           show ? "flex" : "hidden"
         } inset-0  items-center justify-center z-50`}
       >
-        <div className="bg-white rounded-lg shadow-xl">
+        <div className="bg-slate-500 rounded-lg shadow-xl">
           <div className="p-4">
-            <h3 className="text-2xl font-semibold text-gray-900">
+            <h3 className="text-2xl text-center tracking-widest font-serif uppercase font-semibold text-white">
               {videoTitle}
             </h3>
-            <div className="bg-gray-50 p-4 flex justify-end">
+            <div className="bg-slate-500 p-4 flex justify-end">
               <FaTimes
+                title="close"
                 onClick={closeVideo}
-                className="text-red-700 text-2xl transition ease-in-out duration-200 hover:scale-125 cursor-pointer"
+                className="text-red-500 text-2xl transition ease-in-out duration-200 hover:scale-125 cursor-pointer"
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-0 p-5">
               <video
                 ref={videoRef}
-                className="w-[500px] h-64"
+                className="w-[520px] h-64"
                 autoPlay
                 src=""
                 controls
@@ -65,7 +66,13 @@ const Card: React.FC<card_interface> = ({ id, source, imgSrc, videoTitle }) => {
           </div>
         </div>
       </div>
-      <div style={{ width: "200px", height: "200px", marginTop: "5px" }}>
+      <div
+        style={{
+          width: "200px",
+          height: "200px",
+          marginTop: "5px",
+        }}
+      >
         <Image
           onClick={playVideo}
           onMouseEnter={handleMouseEnter}
@@ -81,7 +88,7 @@ const Card: React.FC<card_interface> = ({ id, source, imgSrc, videoTitle }) => {
             objectFit: "cover", // You can use "cover" to maintain aspect ratio and fill the container
             width: "100%",
             height: "100%",
-            borderRadius: "0.125rem",
+            borderRadius: "5px",
             transition: "all 250ms ease-in-out 0s",
             maxWidth: "200px", // Set the maximum width
             transform: isHovering ? "scale(1.1)" : "scale(1)",

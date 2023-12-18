@@ -12,10 +12,11 @@ const Footer = () => {
       className="bg-white rounded-lg shadow h-36 mt-6 dark:bg-gray-800"
     >
       <div className="w-full mx-auto  p-4 md:flex md:items-center md:justify-between">
-        <span className="text-lg text-white sm:text-center dark:text-gray-400">
+        <span className="text-lg text-white hover:underline sm:text-center cursor-pointer dark:text-gray-400">
           © 2023
-          <Link href="/" className="hover:underline"></Link>.Shree Krishna
-          Pranami Sampradaya.All Rights Reserved.
+          <Link href="/">
+            .Shree Krishna Pranami Sampradaya.All Rights Reserved.
+          </Link>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-lg font-medium text-white sm:mt-0">
           <li>

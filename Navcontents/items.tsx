@@ -12,7 +12,7 @@ export const items: { id: Number; menu: string; to: string }[] = [
   },
   {
     id: 3,
-    menu: "Video",
+    menu: "Videos",
     to: "/videos",
   },
 ];

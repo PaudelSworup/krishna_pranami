@@ -38,8 +38,12 @@ const Banner = () => {
         </h1>
         <div className="text-xl md:text-2xl lg:text-3xl font-medium text-white tracking-wide ">
           <p> तारतम्येन जानति सच्चिदानन्द लक्षणम्</p>
-          <p> श्री राजी श्यामाजी प्रणाम</p>
-          <p> श्री राजी श्यामाजी प्रणाम</p>
+          <br />
+          <p>
+            जो प्रदक्षिणा निजधामकि,सातौ स्वरुप श्रीराज । <br />
+            सो सारे पन्ना मिने,सैयो के सुख काज ।।
+          </p>
+          <br />
         </div>
       </div>
     </div>

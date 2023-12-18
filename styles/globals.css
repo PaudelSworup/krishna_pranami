@@ -16,6 +16,10 @@
   }
 }
 
+body {
+  background-color: azure;
+}
+
 .nav_menu {
   position: relative;
   /* background-color: red; */
@@ -47,4 +51,12 @@
 
 body {
   background-color: #f1f5f9;
+}
+
+@media (max-width: 600px) {
+  .videos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
