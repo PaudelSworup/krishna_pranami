@@ -22,4 +22,11 @@ export const items: {
     media: "/media/meher.mp4",
     videoTitle: "Shree Raji ko Meher",
   },
+
+  {
+    id: 4,
+    src: "/images/prananathjiretartam.png",
+    media: "/media/brazaRas.mp4",
+    videoTitle: "Prannathji rw Tartam Sagar",
+  },
 ];
