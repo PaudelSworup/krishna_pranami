@@ -20,7 +20,7 @@ const Pagination: React.FC<{
           <li key={number}>
             <a
               onClick={() => paginate(number)}
-              className="flex items-center cursor-pointer justify-center px-4 h-10 leading-tight text-black bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="flex items-center cursor-pointer justify-center px-4 h-10 w-10 rounded-full leading-tight text-black bg-slate-200 border border-gray-300 hover:bg-gray-100 hover:text-gray-700  dark:text-gray-400"
             >
               {number}
             </a>

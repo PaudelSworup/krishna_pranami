@@ -26,7 +26,7 @@ const Nav: React.FC<light_dark> = (props) => {
         <>
           <div className="flex p-4 justify-between items-center">
             <Link href="/">
-              <div className="flex gap-2  cursor-pointer justify-center items-center">
+              <div className="flex gap-2 nav-img-container cursor-pointer justify-center items-center">
                 <Image
                   src="https://mahamati.info/resources/Raj%20Shyama%20ji%20(1).jpg"
                   alt=""
@@ -44,13 +44,13 @@ const Nav: React.FC<light_dark> = (props) => {
               </div>
             </Link>
 
-            <div className="sm:hidden absolute right-6 top-6 flex items-center pr-2">
+            <div className="sm:hidden absolute fa-bars-container right-6 top-6 flex items-center pr-2">
               <button
                 type="button"
                 className="relative bg-gray-800 p-1 transition-all duration-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 onClick={toggleMobileMenu}
               >
-                <FaBars className="text-white" />
+                <FaBars className="text-white text-2xl rounded-lg font-serif bg-slate-700" />
               </button>
             </div>
           </div>

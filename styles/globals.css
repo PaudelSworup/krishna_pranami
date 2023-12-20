@@ -56,3 +56,19 @@ body {
     align-items: center;
   }
 }
+
+@media (max-width: 635px) {
+  .nav-img-container {
+    width: 150px;
+  }
+
+  .fa-bars-container {
+    top: 40px;
+  }
+}
+
+@media (max-width: 300px) {
+  .nav-img-container {
+    width: 100px;
+  }
+}
