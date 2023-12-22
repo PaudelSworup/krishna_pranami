@@ -15,19 +15,19 @@ const ArticleDescription = ({
     <>
       <Layout title={articleData?.title}>
         <Nav darkmode={darkmode} />
-        <div className="flex flex-col justify-center p-8 sm:mx-60 items-start">
+        <div className="flex flex-col justify-center items-start xl:items-center p-8 xl:mx-60 ">
           <h2
-            className={`font-serif text-2xl tracking-wider  font-bold ${dark}`}
+            className={`font-serif text-2xl sm:text-4xl tracking-wider  font-bold ${dark}`}
           >
             {articleData?.title}
           </h2>
 
-          <h2 className={`font-serif text-xl ${dark}`}>
-            श्री राजी श्यामाजी प्रणाम
+          <h2 className={`font-serif text-xl md:text-3xl ${dark}`}>
+            श्री राजी श्यामाजी प्रणाम,
           </h2>
 
           <p
-            className={`font-serif text-xl text-justify tracking widest  ${dark}`}
+            className={`font-serif text-xl md:text-2xl  text-justify tracking widest  ${dark}`}
             dangerouslySetInnerHTML={{ __html: articleData?.fullDescription }}
           />
         </div>
