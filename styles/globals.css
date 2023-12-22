@@ -65,6 +65,10 @@ body {
   .fa-bars-container {
     top: 40px;
   }
+
+  .banner-image-div {
+    height: 500px;
+  }
 }
 
 @media (max-width: 300px) {

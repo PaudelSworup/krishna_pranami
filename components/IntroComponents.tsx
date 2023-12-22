@@ -5,13 +5,13 @@ import React from "react";
 const IntroComponents: React.FC<light_dark> = (props) => {
   return (
     <div className="sm:flex p-10 justify-center gap-20 items-center">
-      <div className="sm:flex justify-center items-center">
+      <div className="flex sm:flex justify-center items-center">
         <Image
           src={props?.image || ""}
           alt=""
           width={300}
           height={200} // Set the desired height
-          // style={{ width: "auto", height: "auto", borderRadius: "50%" }} // Maintain aspect ratio and apply styling
+          style={{ borderRadius: "5%" }} // Maintain aspect ratio and apply styling
         />
       </div>
       <div className="max-w-full w-[600px]">
