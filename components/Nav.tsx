@@ -1,7 +1,12 @@
 import ThemeContext from "@/ApplicationWrapper/ThemeContext";
 
 import React, { useContext, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import {
+  FaAngleDoubleDown,
+  FaAngleDown,
+  FaAngleRight,
+  FaBars,
+} from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { light_dark } from "@/interfaces/interface";
@@ -11,16 +16,21 @@ import Switchmode from "./SwitchMode";
 const Nav: React.FC<light_dark> = (props) => {
   const { darkmode, toggleMode } = useContext(ThemeContext);
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const [bhajanDropdown, setBhajanDropdown] = useState<boolean>(false);
 
   const toggleMobileMenu = (): void => {
     setMobileMenu((prev) => !prev);
   };
 
+  const toggleBhajanDropdownEnter = (): void => {
+    setBhajanDropdown((prev) => !prev);
+  };
+
   return (
     <>
       <nav
-        className={` shadow-2xl   py-2 px-7 md:px-10 md:flex items-center justify-between sticky top-0 z-10  ${
-          props.darkmode ? "bg-black" : "bg-slate-100"
+        className={` shadow-2xl   py-2 px-7 md:px-10 md:flex lg:h-[100px] items-center justify-between sticky top-0 z-10  ${
+          props.darkmode ? "bg-black" : "bg-slate-200"
         }`}
       >
         <>
@@ -56,13 +66,13 @@ const Nav: React.FC<light_dark> = (props) => {
           </div>
 
           <div className="hidden transition-all duration-300 ease-in-out sm:flex ml-6">
-            {items.map((menuItems, i) => {
+            {items?.map((menuItems, i) => {
               const { menu, to } = menuItems;
 
               return (
                 <li
                   key={i}
-                  className="md:my-2 my-[95px] cursor-pointer flex flex-col  justify-center items-center"
+                  className="md:my-2 my-[95px] uppercase ml-3 cursor-pointer flex flex-col  justify-center items-center"
                 >
                   <Link href={to}>
                     <div
@@ -70,12 +80,56 @@ const Nav: React.FC<light_dark> = (props) => {
                         props?.darkmode ? "text-white " : "text-black"
                       }cursor-pointer relative p-1 tracking-widest`}
                     >
-                      <span className="nav_menu">{menu}</span>
+                      <span className="nav_menu">
+                        {menu === "Bhajan" ? (
+                          <span
+                            className="flex items-center"
+                            onClick={toggleBhajanDropdownEnter}
+                          >
+                            Bhajan
+                            {bhajanDropdown ? (
+                              <FaAngleDown className="text-xl" />
+                            ) : (
+                              <FaAngleRight className="text-xl" />
+                            )}
+                          </span>
+                        ) : (
+                          menu
+                        )}
+                      </span>
                     </div>
                   </Link>
                 </li>
               );
             })}
+
+            {bhajanDropdown && (
+              <li className="md:my-2 my-[95px] fixed top-12 right-10 uppercase ml-3 cursor-pointer flex flex-col  justify-center items-center">
+                <div
+                  className="bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4"
+                  id="dropdown"
+                >
+                  <ul className="py-1" aria-labelledby="dropdown">
+                    <li>
+                      <Link
+                        href="#"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                      >
+                        Bani Gayan
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+                      >
+                        Bhajan
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            )}
           </div>
 
           <div
@@ -87,12 +141,12 @@ const Nav: React.FC<light_dark> = (props) => {
           >
             <div className="flex flex-col space-y-4">
               {items.map((menuItems, i) => {
-                const { menu, to } = menuItems;
+                const { menu, to, subMenu } = menuItems;
 
                 return (
                   <li
                     key={i}
-                    className="md:my-2 cursor-pointer flex flex-col  justify-center items-center"
+                    className="md:my-2 cursor-pointer uppercase flex flex-col  justify-center items-center"
                   >
                     <div className="text-white cursor-pointer relative p-1 tracking-widest">
                       <span
@@ -112,9 +166,6 @@ const Nav: React.FC<light_dark> = (props) => {
           </div>
         </>
       </nav>
-      <div className="fixed top-1 left-1 z-20">
-        <Switchmode darkmode={darkmode} toggleMode={toggleMode} />
-      </div>
     </>
   );
 };

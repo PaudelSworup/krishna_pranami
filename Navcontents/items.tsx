@@ -1,4 +1,9 @@
-export const items: { id: Number; menu: string; to: string }[] = [
+export const items: {
+  id: Number;
+  menu: string;
+  to: string;
+  subMenu?: { id: number; menu: string; to: string }[];
+}[] = [
   {
     id: 1,
     menu: "Home",
@@ -14,5 +19,17 @@ export const items: { id: Number; menu: string; to: string }[] = [
     id: 3,
     menu: "Videos",
     to: "/videos",
+  },
+
+  {
+    id: 4,
+    menu: "Gallery",
+    to: "/gallery",
+  },
+
+  {
+    id: 5,
+    menu: "Bhajan",
+    to: "#",
   },
 ];
