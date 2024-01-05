@@ -7,7 +7,6 @@ import Banner from "@/components/Banner";
 import Intro from "@/components/Intro";
 import Footer from "@/components/Footer";
 import Switchmode from "@/components/SwitchMode";
-import Navs from "@/components/Navs";
 
 const inter = Inter({ subsets: ["latin"] });
 
